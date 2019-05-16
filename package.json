@@ -1,0 +1,45 @@
+{
+  "name": "@sequencemedia/sequencemedia",
+  "version": "0.0.1",
+  "description": "@SequenceMedia/sequencemedia",
+  "author": "Jonathan Perry @ Sequence Media Limited",
+  "private": true,
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-do-expressions": "^7.2.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "module-alias": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "@sequencemedia": "./src"
+          }
+        }
+      ]
+    ]
+  },
+  "_moduleAliases": {
+    "@sequencemedia": "./src"
+  }
+}

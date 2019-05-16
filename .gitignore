@@ -1,0 +1,6 @@
+.DS_Store
+
+node_modules
+
+pub/assets/fonts
+src/assets/fonts
