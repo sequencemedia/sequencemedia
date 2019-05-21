@@ -43,6 +43,8 @@
 
     color: #999;
 
+    white-space: nowrap;
+
     &::before {
       content: "\0203A"
     }
@@ -68,6 +70,20 @@
     path.lo,
     path.hi {
       fill-rule: evenodd;
+    }
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 736px) {
+    h1 {
+      font-size: 1.125rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 414px) {
+    h1 {
+      font-size: 1.125rem;
+      line-height: 3.5rem;
     }
   }
 
