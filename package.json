@@ -19,7 +19,8 @@
     "lint:js": "eslint *.js build",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:css": "stylelint src/sass",
-    "lint:css:fix": "npm run lint:css -- --fix"
+    "lint:css:fix": "npm run lint:css -- --fix",
+    "pre-commit": "npm run lint && npm run build && git add pub"
   },
   "dependencies": {
     "@babel/cli": "^7.5.5",
@@ -77,5 +78,10 @@
   "_moduleAliases": {
     "@sequencemedia": "./src",
     "build": "./build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
   }
 }
