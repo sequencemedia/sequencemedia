@@ -1,4 +1,3 @@
-require('dotenv/config')
 require('module-alias/register')
 require('@babel/register')({
   cwd: __dirname,
@@ -10,10 +9,22 @@ require('@babel/register')({
 const gulp = require('gulp')
 
 const {
+  buildFontsClean,
+  buildFonts,
+  buildFontsWatch,
   buildCssClean,
   buildCss,
   buildCssWatch
 } = require('build/gulp')
+
+gulp
+  .task('build:fonts:clean', buildFontsClean)
+
+gulp
+  .task('build:fonts', gulp.series('build:fonts:clean', buildFonts))
+
+gulp
+  .task('build:fonts:watch', gulp.series('build:fonts', buildFontsWatch))
 
 gulp
   .task('build:css:clean', buildCssClean)
@@ -23,3 +34,12 @@ gulp
 
 gulp
   .task('build:css:watch', gulp.series('build:css', buildCssWatch))
+
+gulp
+  .task('build:clean', gulp.series('build:fonts:clean', 'build:css:clean'))
+
+gulp
+  .task('build', gulp.series('build:fonts', 'build:css'))
+
+gulp
+  .task('build:watch', gulp.parallel('build:fonts:watch', 'build:css:watch'))

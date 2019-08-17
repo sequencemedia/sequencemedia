@@ -1,5 +1,3 @@
-require('dotenv/config')
-
 const {
   env: {
     NODE_ENV = 'development'
@@ -36,7 +34,7 @@ const plugins = [
       cwd: 'babelrc',
       alias: {
         '@sequencemedia': './src',
-        'build': './build'
+        build: './build'
       }
     }
   ]

@@ -1,5 +1,3 @@
-import 'dotenv/config'
-
 import gulp from 'gulp'
 import debug from 'gulp-debug'
 import vinylPaths from 'vinyl-paths'
