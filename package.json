@@ -5,9 +5,9 @@
   "author": "Jonathan Perry @ Sequence Media Limited",
   "private": true,
   "scripts": {
-    "build:clean": "gulp build:clean",
-    "build": "gulp build",
-    "build:watch": "gulp build:watch",
+    "build:clean": "cross-env NODE_ENV=production gulp build:clean",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "build:watch": "cross-env NODE_ENV=production gulp build:watch",
     "build:fonts:clean": "gulp build:fonts:clean",
     "build:fonts": "gulp build:fonts",
     "build:fonts:watch": "gulp build:fonts:watch",
@@ -33,13 +33,13 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "babel-plugin-module-resolver": "^3.2.0",
-    "core-js": "^3.2.1",
-    "module-alias": "^2.2.1"
+    "core-js": "^3.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.0",
     "cssnano": "^4.1.10",
     "del": "^5.0.0",
     "eslint": "^6.1.0",
@@ -57,26 +57,14 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "husky": "^3.0.4",
+    "module-alias": "^2.2.1",
     "postcss-scss": "^2.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.9.3",
     "vinyl-paths": "^3.0.0"
   },
-  "babel": {
-    "plugins": [
-      [
-        "module-resolver",
-        {
-          "alias": {
-            "@sequencemedia": "./src"
-          }
-        }
-      ]
-    ]
-  },
   "_moduleAliases": {
-    "@sequencemedia": "./src",
     "build": "./build"
   },
   "husky": {

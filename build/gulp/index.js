@@ -36,8 +36,7 @@ export const buildCssWatch = () => (
   gulp.watch(
     [
       './src/sass/**/*',
-      './src/fonts/**/*',
-      './src/svg/**/*'
+      './src/fonts/**/*'
     ],
     {
       name: 'build-css-watch',

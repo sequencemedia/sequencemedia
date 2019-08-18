@@ -1,6 +1,5 @@
 require('module-alias/register')
 require('@babel/register')({
-  cwd: __dirname,
   ignore: [
     /node_modules/
   ]
