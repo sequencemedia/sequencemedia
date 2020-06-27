@@ -1,3 +1,7 @@
+const debug = require('debug')
+
+const log = debug('@sequencemedia/sequencemedia')
+
 const {
   env: {
     NODE_ENV = 'development'
@@ -7,9 +11,9 @@ const {
 const presets = [
   [
     '@babel/env', {
-      useBuiltIns: 'entry',
+      useBuiltIns: 'usage',
       targets: {
-        node: 'current'
+        node: '12.18.1'
       },
       corejs: 3
     }
@@ -29,10 +33,16 @@ const plugins = [
   ]
 ]
 
-module.exports = (api = { cache: { using: () => console.error({ NODE_ENV }) } }) => {
-  console.log({ NODE_ENV })
+function env () {
+  log({ NODE_ENV })
 
-  api.cache.using(() => NODE_ENV)
+  return (
+    NODE_ENV === 'production'
+  )
+}
+
+module.exports = (api) => {
+  if (api) api.cache.using(env)
 
   return {
     presets,
