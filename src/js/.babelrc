@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "@babel/env", {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 9",
+            "ios >= 8",
+            "ie >= 9",
+            "> 2%"
+          ]
+        },
+        /*
+         *  Required! For `browsers`
+         */
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ]
+  ]
+}

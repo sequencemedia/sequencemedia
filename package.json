@@ -5,12 +5,12 @@
   "private": true,
   "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
   "scripts": {
-    "build:clean": "cross-env NODE_ENV=production gulp build:clean",
-    "build": "cross-env NODE_ENV=production gulp build",
-    "build:watch": "cross-env NODE_ENV=production gulp build:watch",
-    "build:fonts:clean": "gulp build:fonts:clean",
-    "build:fonts": "gulp build:fonts",
-    "build:fonts:watch": "gulp build:fonts:watch",
+    "build:clean": "cross-env NODE_ENV=production concurrently -r \"npm run build:js:clean\" \"npm run build:css:clean\"",
+    "build": "cross-env NODE_ENV=production concurrently -r \"npm run build:js\" \"npm run build:css\"",
+    "build:watch": "cross-env NODE_ENV=production concurrently -r \"npm run build:js:watch\" \"npm run build:css:watch\"",
+    "build:js:clean": "rm -rf pub/assets/js/*.js pub/assets/js/*.js.map",
+    "build:js": "webpack",
+    "build:js:watch": "npm run build:js -- -w",
     "build:css:clean": "gulp build:css:clean",
     "build:css": "gulp build:css",
     "build:css:watch": "gulp build:css:watch",
@@ -22,21 +22,26 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "pre-commit": "npm run lint && npm run build && git add pub"
   },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "jquery": "^3.5.1"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.10.3",
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/register": "^7.10.3",
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.4",
     "autoprefixer": "^9.8.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.2.0",
     "core-js": "^3.6.5",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
-    "debug": "^4.1.1",
     "del": "^5.1.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-plugin-import": "^2.22.0",
@@ -56,10 +61,11 @@
     "stylelint": "^13.6.1",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-scss": "^3.18.0",
-    "vinyl-paths": "^3.0.1"
-  },
-  "_moduleAliases": {
-    "build": "./build"
+    "terser-webpack-plugin": "^3.0.6",
+    "vinyl-paths": "^3.0.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^4.2.2"
   },
   "husky": {
     "hooks": {

@@ -1,4 +1,3 @@
-require('module-alias/register')
 require('@babel/register')({
   ignore: [
     /node_modules/
@@ -14,7 +13,7 @@ const {
   buildCssClean,
   buildCss,
   buildCssWatch
-} = require('build/gulp')
+} = require('./build/gulp')
 
 gulp
   .task('build:fonts:clean', buildFontsClean)
