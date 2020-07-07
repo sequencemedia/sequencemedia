@@ -30,6 +30,12 @@ const plugins = [
         build: './build'
       }
     }
+  ],
+  [
+    'minify-dead-code-elimination',
+    {
+      optimizeRawSize: true
+    }
   ]
 ]
 
