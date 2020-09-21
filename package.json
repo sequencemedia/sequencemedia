@@ -23,7 +23,7 @@
     "pre-commit": "npm run lint && npm run build && git add pub"
   },
   "dependencies": {
-    "debug": "^4.1.1",
+    "debug": "^4.2.0",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
