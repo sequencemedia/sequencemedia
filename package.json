@@ -59,7 +59,7 @@
     "husky": "^4.3.0",
     "module-alias": "^2.2.2",
     "postcss": "7.0.34",
-    "postcss-scss": "3.0.0",
+    "postcss-scss": "3.0.1",
     "stylelint": "^13.7.2",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-scss": "^3.18.0",
