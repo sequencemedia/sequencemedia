@@ -58,7 +58,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "husky": "^4.3.0",
     "module-alias": "^2.2.2",
-    "postcss": "7.0.34",
+    "postcss": "8.1.0",
     "postcss-scss": "3.0.0",
     "stylelint": "^13.7.2",
     "stylelint-config-recommended-scss": "^4.2.0",
