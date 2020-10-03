@@ -3,11 +3,9 @@ import debug from 'gulp-debug'
 import vinylPaths from 'vinyl-paths'
 import del from 'del'
 
+import cssFromSass from './css-from-sass'
+
 import handleWatchError from './handle-watch-error'
-
-import cssFromSass from './build/css-from-sass'
-
-const CWD = process.cwd()
 
 export const buildFontsClean = () => (
   gulp.src('./pub/assets/fonts/*', { read: false })
@@ -21,7 +19,7 @@ export const buildFonts = () => (
 )
 
 export const buildFontsWatch = () => (
-  gulp.watch('./src/fonts/**/*', { name: 'build-fonts-watch', cwd: CWD }, gulp.series(buildFontsClean, buildFonts))
+  gulp.watch('./src/fonts/**/*', { name: 'build-fonts-watch', cwd: process.cwd() }, gulp.series(buildFontsClean, buildFonts))
     .on('error', handleWatchError)
 )
 
@@ -40,7 +38,7 @@ export const buildCssWatch = () => (
     ],
     {
       name: 'build-css-watch',
-      cwd: CWD
+      cwd: process.cwd()
     },
     gulp.series(buildCssClean, buildCss)
   )
