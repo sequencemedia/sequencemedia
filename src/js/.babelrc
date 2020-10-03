@@ -11,9 +11,6 @@
             "> 2%"
           ]
         },
-        /*
-         *  Required! For `browsers`
-         */
         "useBuiltIns": "usage",
         "corejs": 3
       }

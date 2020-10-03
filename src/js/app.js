@@ -1,9 +1,12 @@
 import debug from 'debug'
-import $ from 'jquery'
 
 const log = debug('@sequencemedia/sequencemedia')
 
 log('`sequencemedia` is awake')
+
+const {
+  $
+} = global
 
 function goFrom (url) {
   const {

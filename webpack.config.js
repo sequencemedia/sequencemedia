@@ -23,9 +23,6 @@ module.exports = {
   stats: {
     colors: true
   },
-  externals: {
-    jquery: 'jQuery'
-  },
   module: {
     rules: [
       {
