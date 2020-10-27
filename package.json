@@ -41,7 +41,7 @@
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "del": "^6.0.0",
-    "eslint": "^7.12.0",
+    "eslint": "^7.12.1",
     "eslint-config-standard": "^15.0.0",
     "eslint-import-resolver-babel-module": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
