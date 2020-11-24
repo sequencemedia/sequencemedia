@@ -26,8 +26,8 @@
     "debug": "^4.3.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.7",
-    "@babel/core": "^7.12.7",
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.8",
     "@babel/eslint-parser": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "@babel/register": "^7.12.1",
@@ -57,7 +57,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^4.3.0",
     "module-alias": "^2.2.2",
-    "postcss": "^8.1.9",
+    "postcss": "^8.1.10",
     "postcss-scss": "^3.0.4",
     "rimraf": "^3.0.2",
     "stylelint": "^13.8.0",
