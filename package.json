@@ -57,7 +57,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^4.3.0",
     "module-alias": "^2.2.2",
-    "postcss": "^8.1.13",
+    "postcss": "^8.1.14",
     "postcss-scss": "^3.0.4",
     "rimraf": "^3.0.2",
     "stylelint": "^13.8.0",
