@@ -54,7 +54,7 @@
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "husky": "^4.3.5",
+    "husky": "^4.3.6",
     "module-alias": "^2.2.2",
     "postcss": "^8.2.1",
     "postcss-scss": "^3.0.4",
