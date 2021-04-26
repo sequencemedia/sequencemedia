@@ -1,36 +1,36 @@
 body,
 html {
-  font-size: 16px;
-  line-height: 24px;
   background-color: #fff;
-  font-family: HwkW-Rg,serif
+  font-family: HwkW-Rg,serif;
+  font-size: 16px;
+  line-height: 24px
 }
 
 body,
 html,
 section {
+  border: none;
+  height: 100%;
   margin: 0;
   padding: 0;
-  border: none;
-  width: 100%;
-  height: 100%
+  width: 100%
 }
 
 section {
-  position: relative;
-  overflow: auto
+  overflow: auto;
+  position: relative
 }
 
 h1 {
+  border: none;
+  color: #999;
+  font-size: 3rem;
+  left: 10%;
+  line-height: 4.5rem;
   margin: 0;
   padding: 0;
-  border: none;
-  font-size: 3rem;
-  line-height: 4.5rem;
   position: absolute;
   top: 20%;
-  left: 10%;
-  color: #999;
   white-space: nowrap
 }
 
@@ -39,11 +39,11 @@ h1:before {
 }
 
 svg {
-  position: absolute;
   bottom: 0;
+  height: auto;
+  position: absolute;
   right: 0;
-  width: 40%;
-  height: auto
+  width: 40%
 }
 
 svg path.lo {
@@ -77,8 +77,8 @@ svg path.lo {
   body,
   html,
   section {
-    min-width: 568px;
-    min-height: 320px
+    min-height: 320px;
+    min-width: 568px
   }
 }
 
