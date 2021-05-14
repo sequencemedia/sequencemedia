@@ -4,3 +4,9 @@ node_modules
 
 pub/assets/fonts
 src/fonts
+
+# User-defined NPM configuration
+.npmrc
+
+# User-defined NVM configuration
+.nvmrc
