@@ -1,5 +1,6 @@
 import gulp from 'gulp'
-import sass from 'gulp-sass'
+import dartSass from 'dart-sass'
+import gulpSass from 'gulp-sass'
 import debug from 'gulp-debug'
 
 import postCss from 'gulp-postcss'
@@ -10,9 +11,11 @@ import cleanCss from 'gulp-clean-css'
 import cssPurge from 'gulp-css-purge'
 import sourcemaps from 'gulp-sourcemaps'
 
+const sass = gulpSass(dartSass)
+
 const getTransformForSass = () => (
   sass({
-    outputStyle: 'nested'
+    outputStyle: 'compressed' // 'nested'
   }).on('error', sass.logError)
 )
 

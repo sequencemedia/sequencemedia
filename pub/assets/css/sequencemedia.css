@@ -35,7 +35,7 @@ h1 {
 }
 
 h1:before {
-  content: "\0203A"
+  content: "›"
 }
 
 svg {
@@ -59,14 +59,14 @@ svg path.lo {
   fill-rule: evenodd
 }
 
-@media screen and (orientation:landscape) and (max-width:736px) {
+@media screen and (orientation:landscape)and (max-width:736px) {
   h1 {
     font-size: 1.125rem;
     line-height: 3.5rem
   }
 }
 
-@media screen and (orientation:portrait) and (max-width:414px) {
+@media screen and (orientation:portrait)and (max-width:414px) {
   h1 {
     font-size: 1.125rem;
     line-height: 3.5rem
