@@ -1,5 +1,5 @@
 import gulp from 'gulp'
-import dartSass from 'dart-sass'
+import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
 import debug from 'gulp-debug'
 

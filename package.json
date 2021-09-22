@@ -24,7 +24,8 @@
     "pre-commit": "npm run lint && npm run build && git add pub"
   },
   "dependencies": {
-    "debug": "^4.3.2"
+    "debug": "^4.3.2",
+    "sass": "^1.42.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
@@ -41,7 +42,6 @@
     "core-js": "^3.18.0",
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.8",
-    "dart-sass": "^1.25.0",
     "del": "^6.0.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
