@@ -47,6 +47,7 @@ module.exports = {
     new SourceMapDevToolPlugin({ filename: '[name].js.map' })
   ],
   optimization: {
+    minimize: true,
     minimizer: [
       new TerserPlugin()
     ]
