@@ -50,5 +50,8 @@ module.exports = {
     minimizer: [
       new TerserPlugin()
     ]
+  },
+  experiments: {
+    backCompat: false
   }
 }
