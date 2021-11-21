@@ -8,7 +8,7 @@ const {
   $
 } = global
 
-function goFrom (url) {
+function goFrom () {
   const {
     location: { href } = {}
   } = global
