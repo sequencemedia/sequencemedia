@@ -5,26 +5,30 @@ const log = debug('@sequencemedia/sequencemedia')
 log('`sequencemedia` is awake')
 
 const {
-  $
+  $ = function jQuery () {
+    log('`jQuery` is not available')
+  }
 } = global
 
 function goFrom () {
   const {
-    location: { href } = {}
+    location: {
+      href
+    } = {}
   } = global
 
   return href
 }
 
-function goTo (url) {
+function goTo (href) {
   const {
     location = {}
   } = global
 
-  location.href = url
+  location.href = href
 }
 
-const getUrl = ({ currentTarget }) => $(currentTarget).attr('href')
+const getHref = ({ currentTarget }) => $(currentTarget).attr('href')
 
 function handleClick (e) {
   log('✔')
@@ -36,20 +40,22 @@ function handleClick (e) {
   if (ga) {
     e.preventDefault()
 
-    const url = getUrl(e)
+    const href = getHref(e)
 
-    ga('send', 'event', 'Click', goFrom(), url, {
+    ga('send', 'event', 'Click', goFrom(), href, {
       hitCallback () {
-        return goTo(url)
+        return goTo(href)
       }
     })
   }
 }
 
-$(() => {
+function handleDOMContentLoaded () {
   const anchors = $('section a')
 
   return (
     anchors.on('click', handleClick)
   )
-})
+}
+
+$(handleDOMContentLoaded)
