@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "debug": "^4.3.3",
-    "sass": "^1.43.5"
+    "sass": "^1.44.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
@@ -39,7 +39,7 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^6.4.0",
-    "core-js": "^3.19.1",
+    "core-js": "^3.19.2",
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.12",
     "del": "^6.0.0",
