@@ -44,6 +44,8 @@ function handleClick (e) {
 
     ga('send', 'event', 'Click', goFrom(), href, {
       hitCallback () {
+        log('❤')
+
         return goTo(href)
       }
     })
