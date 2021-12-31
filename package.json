@@ -25,14 +25,14 @@
   },
   "dependencies": {
     "debug": "^4.3.3",
-    "sass": "^1.45.1"
+    "sass": "^1.45.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.5",
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
     "@babel/eslint-parser": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "@babel/register": "^7.16.5",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/register": "^7.16.7",
     "autoprefixer": "^10.4.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-minify-dead-code-elimination": "^0.5.1",
@@ -54,7 +54,7 @@
     "gulp-css-purge": "^3.0.9",
     "gulp-debug": "^4.0.0",
     "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^7.0.4",
     "module-alias": "^2.2.2",
