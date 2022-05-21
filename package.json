@@ -25,13 +25,13 @@
   },
   "dependencies": {
     "debug": "^4.3.4",
-    "sass": "^1.51.0"
+    "sass": "^1.52.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.17.12",
+    "@babel/core": "^7.18.0",
     "@babel/eslint-parser": "^7.17.0",
-    "@babel/preset-env": "^7.17.12",
+    "@babel/preset-env": "^7.18.0",
     "@babel/register": "^7.17.7",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
@@ -41,9 +41,9 @@
     "concurrently": "^7.2.0",
     "core-js": "^3.22.5",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.1.8",
+    "cssnano": "^5.1.9",
     "del": "^6.1.0",
-    "eslint": "^8.15.0",
+    "eslint": "^8.16.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
     "eslint-plugin-import": "^2.26.0",
@@ -58,7 +58,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^8.0.1",
     "module-alias": "^2.2.2",
-    "postcss": "^8.4.13",
+    "postcss": "^8.4.14",
     "postcss-scss": "^4.0.4",
     "rimraf": "^3.0.2",
     "stylelint": "^14.8.2",
