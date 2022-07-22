@@ -4,7 +4,7 @@ import path from 'path'
 
 const log = debug('@sequencemedia/sequencemedia')
 
-export default function ({
+export default function handleWatchError ({
   code = 'No error code defined',
   message = 'No error message defined',
   filename: f,

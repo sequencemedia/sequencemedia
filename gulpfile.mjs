@@ -1,19 +1,13 @@
-require('@babel/register')({
-  ignore: [
-    /node_modules/
-  ]
-})
+import gulp from 'gulp'
 
-const gulp = require('gulp')
-
-const {
+import {
   buildFontsClean,
   buildFonts,
   buildFontsWatch,
   buildCssClean,
   buildCss,
   buildCssWatch
-} = require('./build/gulp')
+} from '#build/gulp'
 
 gulp
   .task('build:fonts:clean', buildFontsClean)
