@@ -1,9 +1,9 @@
 {
   "name": "@sequencemedia/sequencemedia",
-  "type": "module",
   "version": "1.0.3",
   "description": "@SequenceMedia/sequencemedia",
   "private": true,
+  "type": "module",
   "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
   "scripts": {
     "build:clean": "cross-env NODE_ENV=production concurrently -r \"npm run build:js:clean\" \"npm run build:css:clean\"",
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "debug": "^4.3.4",
-    "sass": "^1.53.0"
+    "sass": "^1.54.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
