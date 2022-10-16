@@ -22,7 +22,8 @@
     "lint:css": "cross-env NODE_ENV=production stylelint src/sass",
     "lint:css:fix": "npm run lint:css -- --fix",
     "nvm": "bash nvm.sh",
-    "pre-commit": "npm run lint && npm run build && git add pub"
+    "pre-commit": "npm run lint && npm run build && git add pub",
+    "prepare": "husky install"
   },
   "dependencies": {
     "debug": "^4.3.4"
