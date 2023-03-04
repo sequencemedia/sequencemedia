@@ -61,7 +61,7 @@
     "module-alias": "^2.2.2",
     "postcss": "^8.4.21",
     "postcss-scss": "^4.0.6",
-    "rimraf": "^4.2.0",
+    "rimraf": "^4.3.0",
     "sass": "^1.58.3",
     "stylelint": "^15.2.0",
     "stylelint-config-recommended-scss": "^9.0.1",
