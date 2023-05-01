@@ -42,7 +42,7 @@
     "concurrently": "^8.0.1",
     "core-js": "^3.30.1",
     "cross-env": "^7.0.3",
-    "cssnano": "^6.0.0",
+    "cssnano": "^6.0.1",
     "del": "^7.0.0",
     "eslint": "^8.39.0",
     "eslint-config-standard": "^17.0.0",
