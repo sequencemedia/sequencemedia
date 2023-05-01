@@ -35,3 +35,6 @@ gulp
 
 gulp
   .task('build:watch', gulp.parallel('build:fonts:watch', 'build:css:watch'))
+
+gulp
+  .task('default', (done) => done())
