@@ -22,16 +22,6 @@ const presets = [
 
 const plugins = [
   [
-    'module-resolver',
-    {
-      root: ['./src'],
-      cwd: 'babelrc',
-      alias: {
-        build: './build'
-      }
-    }
-  ],
-  [
     'minify-dead-code-elimination',
     {
       optimizeRawSize: true

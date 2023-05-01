@@ -1,20 +1,22 @@
-const path = require('path')
+import path from 'path'
 
-const {
+import {
   CleanWebpackPlugin
-} = require('clean-webpack-plugin')
+} from 'clean-webpack-plugin'
+
+import Webpack from 'webpack'
+
+import TerserPlugin from 'terser-webpack-plugin'
 
 const {
   EnvironmentPlugin,
   SourceMapDevToolPlugin
-} = require('webpack')
-
-const TerserPlugin = require('terser-webpack-plugin')
+} = Webpack
 
 const srcPath = path.join(path.resolve('./src'), 'js/app.js')
 const pubPath = path.join(path.resolve('./pub'), 'assets/js')
 
-module.exports = {
+export default {
   mode: 'production',
   entry: {
     app: srcPath
