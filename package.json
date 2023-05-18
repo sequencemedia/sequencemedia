@@ -63,7 +63,7 @@
     "stylelint": "^15.6.2",
     "stylelint-config-recommended-scss": "^11.0.0",
     "stylelint-scss": "^5.0.0",
-    "terser-webpack-plugin": "^5.3.8",
+    "terser-webpack-plugin": "^5.3.9",
     "vinyl-paths": "3.0.1",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1"
