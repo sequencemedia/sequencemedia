@@ -29,12 +29,12 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
-    "@babel/core": "^7.21.8",
+    "@babel/core": "^7.22.1",
     "@babel/eslint-parser": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-env": "^7.22.2",
     "@babel/register": "^7.21.0",
-    "@sequencemedia/gulp": "^1.0.22",
-    "@sequencemedia/hooks": "^1.0.423",
+    "@sequencemedia/gulp": "^1.0.23",
+    "@sequencemedia/hooks": "^1.0.424",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "babel-plugin-minify-dead-code-elimination": "^0.5.2",
@@ -65,7 +65,7 @@
     "stylelint-scss": "^5.0.0",
     "terser-webpack-plugin": "^5.3.9",
     "vinyl-paths": "3.0.1",
-    "webpack": "^5.84.0",
+    "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1"
   },
   "imports": {
