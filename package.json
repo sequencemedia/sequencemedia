@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/sequencemedia",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "description": "@SequenceMedia/sequencemedia",
   "private": true,
   "type": "module",
