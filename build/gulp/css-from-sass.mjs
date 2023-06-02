@@ -1,7 +1,7 @@
-import gulp from 'gulp'
+import gulp from '@sequencemedia/gulp'
 import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
-import debug from 'gulp-debug'
+import debug from '@sequencemedia/gulp-debug'
 
 import postCss from 'gulp-postcss'
 import scss from 'postcss-scss'
