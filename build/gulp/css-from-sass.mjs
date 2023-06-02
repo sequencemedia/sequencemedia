@@ -3,7 +3,7 @@ import dartSass from 'sass'
 import gulpSass from '@sequencemedia/gulp-sass'
 import debug from '@sequencemedia/gulp-debug'
 
-import postCss from 'gulp-postcss'
+import postCss from '@sequencemedia/gulp-postcss'
 import scss from 'postcss-scss'
 import autoprefixer from 'autoprefixer'
 import nano from 'cssnano'
