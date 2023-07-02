@@ -52,7 +52,7 @@ function handleClick (e) {
         from: getPage(),
         to: href,
         event_callback () {
-          log('❤️')
+          log('👍')
 
           goTo(href)
         },
