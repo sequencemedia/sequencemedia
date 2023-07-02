@@ -8,14 +8,14 @@ const {
   $ = function jQuery () {
     log('`jQuery` is not available')
   }
-} = global
+} = window
 
-function goFrom () {
+function getPage () {
   const {
     location: {
       href
     } = {}
-  } = global
+  } = window
 
   return href
 }
@@ -23,41 +23,48 @@ function goFrom () {
 function goTo (href) {
   const {
     location = {}
-  } = global
+  } = window
 
-  location.href = href
+  if (location.href !== href) location.href = href
 }
 
 const getHref = ({ currentTarget }) => $(currentTarget).attr('href')
 
 function handleClick (e) {
-  log('✔')
+  log('🚀')
 
   const {
-    ga
-  } = global
+    gtag
+  } = window
 
-  if (ga) {
-    e.preventDefault()
-
+  if (gtag) {
     const href = getHref(e)
 
-    ga('send', 'event', 'Click', goFrom(), href, {
-      hitCallback () {
-        log('❤')
+    if (href.startsWith('mailto')) {
+      gtag('event', 'click', {
+        on: getPage(),
+        to: href
+      })
+    } else {
+      e.preventDefault()
 
-        return goTo(href)
-      }
-    })
+      gtag('event', 'click', {
+        from: getPage(),
+        to: href,
+        event_callback () {
+          log('❤️')
+
+          goTo(href)
+        },
+        event_timeout: 500
+      })
+    }
   }
 }
 
 function handleDOMContentLoaded () {
-  const anchors = $('section a')
-
-  return (
-    anchors.on('click', handleClick)
-  )
+  $('section a')
+    .on('click', handleClick)
 }
 
 $(handleDOMContentLoaded)
