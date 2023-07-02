@@ -1,5 +1,5 @@
 import gulp from '@sequencemedia/gulp'
-import dartSass from 'sass'
+import * as dartSass from 'sass'
 import gulpSass from '@sequencemedia/gulp-sass'
 import debug from '@sequencemedia/gulp-debug'
 
