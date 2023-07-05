@@ -43,7 +43,7 @@
     "@sequencemedia/gulp-debug": "^1.0.19",
     "@sequencemedia/gulp-postcss": "^1.0.15",
     "@sequencemedia/gulp-sass": "^1.0.14",
-    "@sequencemedia/gulp-sourcemaps": "^1.0.13",
+    "@sequencemedia/gulp-sourcemaps": "^1.0.14",
     "@sequencemedia/hooks": "^1.0.439",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
