@@ -41,14 +41,14 @@ function handleClick (e) {
     const href = getHref(e)
 
     if (href.startsWith('mailto')) {
-      gtag('event', 'click', {
+      gtag('event', 'email_link_click', {
         on: getPage(),
         to: href
       })
     } else {
       e.preventDefault()
 
-      gtag('event', 'click', {
+      gtag('event', 'link_click', {
         from: getPage(),
         to: href,
         event_callback () {
@@ -56,7 +56,7 @@ function handleClick (e) {
 
           goTo(href)
         },
-        event_timeout: 500
+        event_timeout: 125
       })
     }
   }
