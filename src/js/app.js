@@ -10,7 +10,9 @@ const {
   }
 } = window
 
-function getPage () {
+const getLinkHref = ({ currentTarget }) => $(currentTarget).attr('href')
+
+function getLocationHref () {
   const {
     location: {
       href
@@ -21,16 +23,16 @@ function getPage () {
 }
 
 function goTo (href) {
-  const {
-    location = {}
-  } = window
+  if (getLocationHref() !== href) {
+    const {
+      location = {}
+    } = window
 
-  if (location.href !== href) location.href = href
+    location.href = href
+  }
 }
 
-const getHref = ({ currentTarget }) => $(currentTarget).attr('href')
-
-function handleClick (e) {
+function handleLinkClick (e) {
   log('🚀')
 
   const {
@@ -38,18 +40,18 @@ function handleClick (e) {
   } = window
 
   if (gtag) {
-    const href = getHref(e)
+    const href = getLinkHref(e)
 
     if (href.startsWith('mailto')) {
       gtag('event', 'email_link_click', {
-        on: getPage(),
+        on: getLocationHref(),
         to: href
       })
     } else {
       e.preventDefault()
 
       gtag('event', 'link_click', {
-        from: getPage(),
+        from: getLocationHref(),
         to: href,
         event_callback () {
           log('👍')
@@ -64,7 +66,7 @@ function handleClick (e) {
 
 function handleDOMContentLoaded () {
   $('section a')
-    .on('click', handleClick)
+    .on('click', handleLinkClick)
 }
 
 $(handleDOMContentLoaded)
