@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Publish with LFTP
-          command: lftp ftp://$FTP_USERNAME:$FTP_PASSWORD@sequencemedia.net -e "set ftp:ssl-allow no; mirror -R --parallel=10 pub public_html"
+          command: lftp ftp://$FTP_USERNAME:$FTP_PASSWORD@sequencemedia.net -e "set ftp:ssl-allow no; mirror -R --parallel=10 pub public_html; exit"
 
 workflows:
   version: 2
