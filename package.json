@@ -57,7 +57,7 @@
     "eslint": "^8.44.0",
     "eslint-config-standard": "^17.1.0",
     "husky": "^8.0.3",
-    "postcss": "^8.4.25",
+    "postcss": "^8.4.26",
     "postcss-scss": "^4.0.6",
     "rimraf": "^5.0.1",
     "sass": "^1.63.6",
