@@ -41,7 +41,7 @@
     "@sequencemedia/gulp-clean-css": "^1.0.20",
     "@sequencemedia/gulp-css-purge": "^1.1.13",
     "@sequencemedia/gulp-debug": "^1.0.24",
-    "@sequencemedia/gulp-postcss": "^1.0.20",
+    "@sequencemedia/gulp-postcss": "^1.0.21",
     "@sequencemedia/gulp-sass": "^1.0.19",
     "@sequencemedia/gulp-sourcemaps": "^1.0.19",
     "@sequencemedia/hooks": "^1.0.443",
