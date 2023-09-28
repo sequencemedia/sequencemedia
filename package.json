@@ -63,7 +63,7 @@
     "husky": "^8.0.3",
     "postcss": "^8.4.30",
     "postcss-scss": "^4.0.8",
-    "rimraf": "^5.0.4",
+    "rimraf": "^5.0.5",
     "sass": "^1.68.0",
     "stylelint": "^15.10.3",
     "stylelint-config-recommended-scss": "^13.0.0",
