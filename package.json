@@ -41,7 +41,7 @@
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-env": "^7.23.2",
     "@babel/register": "^7.22.15",
-    "@sequencemedia/gulp": "^1.1.98",
+    "@sequencemedia/gulp": "^1.1.99",
     "@sequencemedia/gulp-clean-css": "^1.0.47",
     "@sequencemedia/gulp-css-purge": "^1.1.41",
     "@sequencemedia/gulp-debug": "^1.0.51",
@@ -70,7 +70,7 @@
     "stylelint-scss": "^5.2.1",
     "terser-webpack-plugin": "^5.3.9",
     "vinyl-paths": "^5.0.0",
-    "webpack": "^5.88.2",
+    "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
   "imports": {
