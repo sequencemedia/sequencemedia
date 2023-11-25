@@ -43,7 +43,7 @@
     "@babel/register": "^7.22.15",
     "@sequencemedia/gulp": "^1.1.120",
     "@sequencemedia/gulp-clean-css": "^1.0.57",
-    "@sequencemedia/gulp-css-purge": "^1.1.51",
+    "@sequencemedia/gulp-css-purge": "^1.1.52",
     "@sequencemedia/gulp-debug": "^1.0.61",
     "@sequencemedia/gulp-postcss": "^1.0.63",
     "@sequencemedia/gulp-sass": "^1.0.56",
