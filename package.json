@@ -41,7 +41,7 @@
     "@babel/eslint-parser": "^7.23.3",
     "@babel/preset-env": "^7.23.6",
     "@babel/register": "^7.22.15",
-    "@sequencemedia/gulp": "^1.1.133",
+    "@sequencemedia/gulp": "^1.1.134",
     "@sequencemedia/gulp-clean-css": "^1.0.66",
     "@sequencemedia/gulp-css-purge": "^1.1.62",
     "@sequencemedia/gulp-debug": "^1.0.70",
