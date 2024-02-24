@@ -15,7 +15,6 @@ jobs:
           command: lftp ftp://$FTP_USERNAME:$FTP_PASSWORD@sequencemedia.net -e "set ftp:ssl-allow no; mirror -R --parallel=10 pub public_html; exit"
 
 workflows:
-  version: 2
   commit-workflow:
     jobs:
       - publish:
