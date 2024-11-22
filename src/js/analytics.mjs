@@ -1,14 +1,9 @@
 import debug from 'debug'
+import $ from 'jquery'
 
 const log = debug('@sequencemedia/sequencemedia')
 
 log('`sequencemedia` is awake')
-
-const {
-  $ = function jQuery () {
-    log('`jQuery` is not available')
-  }
-} = window
 
 const getLinkHref = ({ currentTarget }) => $(currentTarget).attr('href')
 
@@ -50,7 +45,7 @@ function handleLinkClick (e) {
     } else {
       e.preventDefault()
 
-      const timeout = setTimeout(() => {
+      const timeout = setTimeout(function handleTimeout () {
         log('😬')
 
         goTo(href)
@@ -60,9 +55,9 @@ function handleLinkClick (e) {
         from: getLocationHref(),
         to: href,
         event_callback () {
-          log('👍')
-
           clearTimeout(timeout)
+
+          log('👍')
 
           goTo(href)
         },

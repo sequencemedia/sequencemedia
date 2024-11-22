@@ -4,7 +4,7 @@ import merge from '@sequencemedia/eslint-config-standard/merge'
 export default (
   merge({
     files: [
-      '**/*.{cjs,mjs}'
+      '*.{cjs,mjs}'
     ],
     ignores: [
       'pub/*'
@@ -18,7 +18,7 @@ export default (
     .concat(
       merge({
         files: [
-          'src/**/*.js'
+          'src/**/*.{cjs,mjs}'
         ],
         languageOptions: {
           globals: {

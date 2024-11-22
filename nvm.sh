@@ -29,8 +29,6 @@ then
 else
   echo NVM version $VERSION available
 
-  set -e
-
   nvm use
 
   if [[ $? != 0 ]];
