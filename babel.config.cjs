@@ -8,6 +8,14 @@ const {
   }
 } = process
 
+function env () {
+  log({ NODE_ENV })
+
+  return (
+    NODE_ENV === 'production'
+  )
+}
+
 const presets = [
   [
     '@babel/env',
@@ -29,14 +37,6 @@ const plugins = [
     }
   ]
 ]
-
-function env () {
-  log({ NODE_ENV })
-
-  return (
-    NODE_ENV === 'production'
-  )
-}
 
 module.exports = (api) => {
   if (api) api.cache.using(env)

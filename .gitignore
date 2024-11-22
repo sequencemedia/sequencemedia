@@ -1,12 +1,12 @@
-.DS_Store
-
+# Node
 node_modules
 
-pub/assets/fonts
-src/fonts
+# Mac
+.DS_Store
 
 # User-defined NPM configuration
 .npmrc
+.npmignore
 
 # User-defined NVM configuration
 .nvmrc
@@ -16,3 +16,4 @@ src/fonts
 
 # Hooks
 .husky/hooks
+

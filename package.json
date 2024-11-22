@@ -13,7 +13,6 @@
     "build": "npm run webpack",
     "build:clean": "rimraf  pub/assets/css/*.css pub/assets/js/*.css.map pub/assets/js/*.mjs pub/assets/js/*.cjs.map pub/assets/js/*.mjs.map",
     "build:watch": "npm run webpack -- -w",
-    "gulp": "gulp --color",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "stylelint src/sass",
     "lint:css:fix": "npm run lint:css -- --fix",
@@ -21,7 +20,6 @@
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint:js -- --fix",
     "nvm": "bash nvm.sh",
-    "pregulp": "npm run nvm",
     "prepare": "husky",
     "prettier": "prettier src/**/*.scss --write",
     "prewebpack": "npm run nvm",
@@ -34,7 +32,6 @@
     "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@babel/register": "^7.25.9",
     "@sequencemedia/eslint-config-standard": "^0.0.87",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
@@ -60,13 +57,7 @@
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-scss": "^6.10.0",
     "terser-webpack-plugin": "^5.3.10",
-    "vinyl-paths": "^5.0.0",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
-  },
-  "imports": {
-    "#build/gulp": "./build/gulp/index.mjs",
-    "#build/gulp/css-from-sass": "./build/gulp/css-from-sass.mjs",
-    "#build/gulp/handle-watch-error": "./build/gulp/handle-watch-error.mjs"
   }
 }
