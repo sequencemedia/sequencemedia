@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npm run webpack",
-    "build:clean": "rimraf  pub/assets/css/*.css pub/assets/js/*.css.map pub/assets/js/*.mjs pub/assets/js/*.cjs.map pub/assets/js/*.mjs.map",
+    "build:clean": "rimraf pub/assets/css/*.css pub/assets/css/*.css.map pub/assets/js/*.cjs pub/assets/js/*.mjs pub/assets/js/*.cjs.map pub/assets/js/*.mjs.map",
     "build:watch": "npm run webpack -- -w",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "stylelint src/sass",
