@@ -1,15 +1,16 @@
-import path from 'path'
+import {
+  join,
+  resolve
+} from 'node:path'
+
+import Webpack from 'webpack'
 
 import {
   CleanWebpackPlugin as CleanPlugin
 } from 'clean-webpack-plugin'
-
-import Webpack from 'webpack'
-
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import RemoveFilesPlugin from 'remove-files-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
-
 import CopyPlugin from 'copy-webpack-plugin'
 
 const {
@@ -17,13 +18,13 @@ const {
   SourceMapDevToolPlugin
 } = Webpack
 
-const srcPath = path.join(path.resolve('./src'), 'sass/sequencemedia.scss')
-const pubPath = path.join(path.resolve('./pub'), 'assets')
+const srcPath = resolve('./src')
+const pubPath = resolve('./pub/assets')
 
 export default {
   mode: 'production',
   entry: {
-    sequencemedia: srcPath
+    sequencemedia: join(srcPath, 'sass/sequencemedia.scss')
   },
   output: {
     path: pubPath,
@@ -45,14 +46,10 @@ export default {
   stats: {
     colors: true
   },
-  externals: {
-    jquery: 'jQuery',
-    debug: 'debug'
-  },
   module: {
     rules: [
       {
-        test: /\.mjs?$/,
+        test: /\.(cjs|mjs)?$/,
         use: 'babel-loader',
         exclude: /node_modules/
       },
@@ -107,17 +104,19 @@ export default {
     new CleanPlugin({
       verbose: false,
       cleanOnceBeforeBuildPatterns: [
-        pubPath.concat('/*.css'),
-        pubPath.concat('/*.css.map'),
-        pubPath.concat('/*.cjs'),
-        pubPath.concat('/*.cjs.map'),
-        pubPath.concat('/*.mjs')
+        join(pubPath, '*.css'),
+        join(pubPath, '*.css.map'),
+        join(pubPath, '*.cjs'),
+        join(pubPath, '*.cjs.map'),
+        join(pubPath, '*.mjs'),
+        join(pubPath, '*.mjs.map')
       ]
     }),
     new EnvironmentPlugin({
       NODE_ENV: 'production'
     }),
     new SourceMapDevToolPlugin({
+      test: /\.css$/i,
       filename: 'css/[name].css.map'
     }),
     new MiniCssExtractPlugin({
@@ -126,8 +125,8 @@ export default {
     new CopyPlugin({
       patterns: [
         {
-          from: path.join(path.resolve('./src'), 'js/analytics.mjs'),
-          to: path.join(pubPath, 'js/analytics.mjs')
+          from: join(srcPath, 'js/analytics.mjs'),
+          to: join(pubPath, 'js/analytics.mjs')
         }
       ]
     }),
@@ -135,7 +134,7 @@ export default {
       after: {
         test: [
           {
-            folder: './pub/assets/css',
+            folder: join(pubPath, 'css'),
             method (filePath) {
               return (
                 filePath.endsWith('.js') ||
@@ -144,7 +143,7 @@ export default {
             }
           },
           {
-            folder: './pub/assets/js',
+            folder: join(pubPath, 'js'),
             method (filePath) {
               return (
                 filePath.endsWith('.js') ||
