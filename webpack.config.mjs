@@ -49,7 +49,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(cjs|mjs)?$/,
+        test: /\.(cjs|mjs)$/,
         use: 'babel-loader',
         exclude: /node_modules/
       },
