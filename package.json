@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npm run webpack",
-    "build:clean": "rimraf pub/assets/css/*.css pub/assets/css/*.css.map pub/assets/js/*.cjs pub/assets/js/*.mjs pub/assets/js/*.cjs.map pub/assets/js/*.mjs.map",
+    "build:clean": "rimraf pub/assets/css/*.css pub/assets/css/*.css.map pub/assets/js/*.cjs pub/assets/js/*.mjs pub/assets/js/*.cjs.map pub/assets/js/*.mjs.map 2> /dev/null",
     "build:watch": "npm run webpack -- -w",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "stylelint src/sass",
@@ -25,11 +25,7 @@
     "prewebpack": "npm run nvm",
     "webpack": "webpack"
   },
-  "dependencies": {
-    "debug": "^4.3.7"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@sequencemedia/eslint-config-standard": "^0.0.87",
@@ -39,8 +35,8 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^12.0.2",
     "core-js": "^3.39.0",
-    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
+    "debug": "^4.3.7",
     "eslint": "^9.15.0",
     "globals": "^15.12.0",
     "husky": "^9.1.7",
