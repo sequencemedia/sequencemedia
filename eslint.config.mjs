@@ -1,8 +1,8 @@
 import globals from 'globals'
 import merge from '@sequencemedia/eslint-config-standard/merge'
 
-export default (
-  merge({
+export default [
+  ...merge({
     files: [
       '*.{cjs,mjs}'
     ],
@@ -14,17 +14,15 @@ export default (
         ...globals.node
       }
     }
+  }),
+  ...merge({
+    files: [
+      'src/**/*.{cjs,mjs}'
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.browser
+      }
+    }
   })
-    .concat(
-      merge({
-        files: [
-          'src/**/*.{cjs,mjs}'
-        ],
-        languageOptions: {
-          globals: {
-            ...globals.browser
-          }
-        }
-      })
-    )
-)
+]
