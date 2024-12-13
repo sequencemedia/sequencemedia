@@ -47,7 +47,7 @@
     "prettier": "^3.4.2",
     "remove-files-webpack-plugin": "^1.5.0",
     "rimraf": "^6.0.1",
-    "sass": "^1.82.0",
+    "sass": "^1.83.0",
     "sass-loader": "^16.0.4",
     "stylelint": "^16.11.0",
     "stylelint-config-recommended-scss": "^14.1.0",
