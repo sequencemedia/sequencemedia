@@ -1,0 +1,6 @@
+#!/bin/sh
+
+npm run build
+npm run transform
+git add pub
+git commit -m 'Build and transform'
