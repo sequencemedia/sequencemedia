@@ -1,3 +1,5 @@
+import debug from 'debug'
+
 import {
   join,
   resolve
@@ -13,21 +15,31 @@ import RemoveFilesPlugin from 'remove-files-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
 
+const log = debug('sequencemedia/webpack')
+
 const {
   EnvironmentPlugin,
   SourceMapDevToolPlugin
 } = Webpack
 
-const srcPath = resolve('./src')
-const pubPath = resolve('./pub/assets')
+const SOURCE_PATH = resolve('./src')
+const ASSETS_PATH = resolve('./pub/assets')
+
+const {
+  env: {
+    npm_package_version: version
+  } = {}
+} = process
+
+log('`sequencemedia` is awake')
 
 export default {
   mode: 'production',
   entry: {
-    sequencemedia: join(srcPath, 'sass/sequencemedia.scss')
+    sequencemedia: join(SOURCE_PATH, 'sass/sequencemedia.scss')
   },
   output: {
-    path: pubPath,
+    path: ASSETS_PATH,
     publicPath: '/assets',
     filename ({ chunk: { files } }) {
       const isCss = (
@@ -104,12 +116,12 @@ export default {
     new CleanPlugin({
       verbose: false,
       cleanOnceBeforeBuildPatterns: [
-        join(pubPath, '*.css'),
-        join(pubPath, '*.css.map'),
-        join(pubPath, '*.cjs'),
-        join(pubPath, '*.cjs.map'),
-        join(pubPath, '*.mjs'),
-        join(pubPath, '*.mjs.map')
+        join(ASSETS_PATH, 'css/*.css'),
+        join(ASSETS_PATH, 'css/*.css.map'),
+        join(ASSETS_PATH, 'js/*.cjs'),
+        join(ASSETS_PATH, 'js/*.cjs.map'),
+        join(ASSETS_PATH, 'js/*.mjs'),
+        join(ASSETS_PATH, 'js/*.mjs.map')
       ]
     }),
     new EnvironmentPlugin({
@@ -117,16 +129,16 @@ export default {
     }),
     new SourceMapDevToolPlugin({
       test: /\.css$/i,
-      filename: 'css/[name].css.map'
+      filename: `css/[name]-${version}.css.map`
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css'
+      filename: `css/[name]-${version}.css`
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: join(srcPath, 'js/analytics.mjs'),
-          to: join(pubPath, 'js/analytics.mjs')
+          from: join(SOURCE_PATH, 'js/analytics.mjs'),
+          to: join(ASSETS_PATH, `js/analytics-${version}.mjs`)
         }
       ]
     }),
@@ -134,7 +146,7 @@ export default {
       after: {
         test: [
           {
-            folder: join(pubPath, 'css'),
+            folder: join(ASSETS_PATH, 'css'),
             method (filePath) {
               return (
                 filePath.endsWith('.js') ||
@@ -143,7 +155,7 @@ export default {
             }
           },
           {
-            folder: join(pubPath, 'js'),
+            folder: join(ASSETS_PATH, 'js'),
             method (filePath) {
               return (
                 filePath.endsWith('.js') ||

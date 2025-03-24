@@ -10,7 +10,7 @@
     "url": "https://sequencemedia.net"
   },
   "scripts": {
-    "build": "npm run webpack",
+    "build": "DEBUG=sequencemedia* npm run webpack",
     "build:clean": "rimraf pub/assets/css/*.css pub/assets/css/*.css.map pub/assets/js/*.cjs pub/assets/js/*.mjs pub/assets/js/*.cjs.map pub/assets/js/*.mjs.map 2> /dev/null",
     "build:watch": "npm run webpack -- -w",
     "lint": "npm run lint:js && npm run lint:css",
@@ -21,8 +21,9 @@
     "lint:js:fix": "npm run lint:js -- --fix",
     "nvm": "bash nvm.sh",
     "prepare": "husky",
-    "prettier": "prettier src/**/*.scss --write",
+    "prettier": "prettier src/sass --write",
     "prewebpack": "npm run nvm",
+    "transform": "DEBUG=sequencemedia* ./transform.sh",
     "webpack": "webpack"
   },
   "devDependencies": {
@@ -38,6 +39,7 @@
     "css-loader": "^7.1.2",
     "debug": "^4.4.0",
     "eslint": "^9.23.0",
+    "glob-all": "^3.3.1",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "mini-css-extract-plugin": "^2.9.2",

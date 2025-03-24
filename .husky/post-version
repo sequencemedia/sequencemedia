@@ -1,8 +1,6 @@
 #!/bin/sh
 
-npm run lint
-npm run prettier
 npm run build
 npm run transform
-git add src/sass
 git add pub
+git commit -m 'Build and transform'
