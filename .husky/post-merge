@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo
+echo "==========================="
+echo "\033[0;35mPost merge\033[0m"
+echo "==========================="
+echo
+
+rm -rf pub/assets/js
+mkdir pub/assets/js
+
+rm -rf pub/assets/css
+mkdir pub/assets/css
+
+npm i
+npm run build
+npm run transform

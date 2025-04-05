@@ -1,6 +1,19 @@
 #!/bin/sh
 
+source .husky/common.sh
+
+echo
+echo "==========================="
+echo "\033[0;35mPost version\033[0m"
+echo "==========================="
+echo
+
 npm run build
 npm run transform
-git add pub
-git commit -m 'Build and transform'
+
+if has_working_tree_changes;
+then
+  git add src/sass
+  git add pub
+  git commit -m 'Built and transformed' --no-verify
+fi

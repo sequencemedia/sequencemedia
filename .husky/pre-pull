@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo
+echo "==========================="
+echo "\033[0;35mPre pull\033[0m"
+echo "==========================="
+echo
+
+rm -rf pub/assets/js
+mkdir pub/assets/js
+
+rm -rf pub/assets/css
+mkdir pub/assets/css
+
+git checkout -- pub/assets/js
+git checkout -- pub/assets/css

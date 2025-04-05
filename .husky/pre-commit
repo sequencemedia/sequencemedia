@@ -1,8 +1,21 @@
 #!/bin/sh
 
+source .husky/common.sh
+
+echo
+echo "==========================="
+echo "\033[0;35mPre commit\033[0m"
+echo "==========================="
+echo
+
 npm run lint
 npm run prettier
+
 npm run build
 npm run transform
-git add src/sass
-git add pub
+
+if has_working_tree_changes;
+then
+  git add src/sass
+  git add pub
+fi

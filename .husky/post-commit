@@ -1,19 +1,26 @@
 #!/bin/sh
 
-get_package_changes () {
-  local CURRENT_BRANCH
-  CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+source .husky/common.sh
 
-  git diff HEAD~1..HEAD~0 -- "origin/$CURRENT_BRANCH" package.json
-}
-
-has_package_changes () {
-  [ ! -z "$(get_package_changes)" ]
-}
+echo
+echo "==========================="
+echo "\033[0;35mPost commit\033[0m"
+echo "==========================="
+echo
 
 if has_package_changes;
 then
   git clone https://github.com/sequencemedia/hooks.git .husky/hooks
   npx cross-env DEBUG=@sequencemedia/hooks* node .husky/hooks/post-commit.mjs
   rm -rf .husky/hooks
+
+  npm run build
+  npm run transform
+
+  if has_working_tree_changes;
+  then
+    git add src/sass
+    git add pub
+    git commit -m 'Built and transformed' --no-verify
+  fi
 fi
