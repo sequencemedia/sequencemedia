@@ -15,5 +15,5 @@ if has_working_tree_changes;
 then
   git add src/sass
   git add pub
-  git commit -m 'Built and transformed' --no-verify
+  git commit --amend --no-edit --no-verify # -m 'Built and transformed' --no-verify
 fi
