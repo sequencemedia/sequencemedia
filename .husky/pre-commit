@@ -16,6 +16,7 @@ npm run transform
 
 if has_working_tree_changes;
 then
+  npm run prettier
   git add src/sass
   git add pub
 fi

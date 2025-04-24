@@ -13,6 +13,7 @@ npm run transform
 
 if has_working_tree_changes;
 then
+  npm run prettier
   git add src/sass
   git add pub
   git commit --amend --no-edit --no-verify # -m 'Built and transformed' --no-verify
