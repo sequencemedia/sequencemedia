@@ -51,7 +51,7 @@
     "rimraf": "^6.0.1",
     "sass": "^1.87.0",
     "sass-loader": "^16.0.5",
-    "stylelint": "^16.18.0",
+    "stylelint": "^16.19.0",
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-scss": "^6.11.1",
     "terser-webpack-plugin": "^5.3.14",
