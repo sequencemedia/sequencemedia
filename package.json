@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
-    "@sequencemedia/eslint-config-standard": "^0.2.57",
+    "@sequencemedia/eslint-config-standard": "^0.2.58",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "babel-plugin-minify-dead-code-elimination": "^0.5.2",
@@ -49,7 +49,7 @@
     "prettier": "^3.5.3",
     "remove-files-webpack-plugin": "^1.5.0",
     "rimraf": "^6.0.1",
-    "sass": "^1.88.0",
+    "sass": "^1.89.0",
     "sass-loader": "^16.0.5",
     "stylelint": "^16.19.1",
     "stylelint-config-recommended-scss": "^15.0.0",
