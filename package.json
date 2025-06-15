@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
-    "@sequencemedia/eslint-config-standard": "^0.2.64",
+    "@sequencemedia/eslint-config-standard": "^0.2.65",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "babel-plugin-minify-dead-code-elimination": "^0.5.2",
