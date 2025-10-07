@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
-    "@sequencemedia/eslint-config-standard": "^0.2.89",
+    "@sequencemedia/eslint-config-standard": "^0.2.90",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "babel-plugin-minify-dead-code-elimination": "^0.5.2",
@@ -55,7 +55,7 @@
     "stylelint-config-recommended-scss": "^16.0.2",
     "stylelint-scss": "^6.12.1",
     "terser-webpack-plugin": "^5.3.14",
-    "webpack": "^5.102.0",
+    "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1"
   }
 }
