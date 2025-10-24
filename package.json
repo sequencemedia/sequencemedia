@@ -27,8 +27,8 @@
     "webpack": "webpack"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/preset-env": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
     "@sequencemedia/eslint-config-standard": "^0.2.96",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
@@ -50,7 +50,7 @@
     "remove-files-webpack-plugin": "^1.5.0",
     "rimraf": "^6.0.1",
     "sass": "^1.93.2",
-    "sass-loader": "^16.0.5",
+    "sass-loader": "^16.0.6",
     "stylelint": "^16.25.0",
     "stylelint-config-recommended-scss": "^16.0.2",
     "stylelint-scss": "^6.12.1",
