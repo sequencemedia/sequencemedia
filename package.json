@@ -40,7 +40,7 @@
     "debug": "^4.4.3",
     "eslint": "9.38.0",
     "glob-all": "^3.3.1",
-    "globals": "^17.0.0",
+    "globals": "^17.1.0",
     "husky": "^9.1.7",
     "mini-css-extract-plugin": "^2.10.0",
     "perfectionist": "^2.4.0",
