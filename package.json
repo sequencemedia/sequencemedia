@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/core": "7.29.7",
     "@babel/preset-env": "7.29.7",
-    "@sequencemedia/eslint-config-standard": "0.2.132",
+    "@sequencemedia/eslint-config-standard": "0.3.2",
     "autoprefixer": "^10.6.1",
     "babel-loader": "^10.1.1",
     "babel-plugin-minify-dead-code-elimination": "^0.5.2",
@@ -38,7 +38,7 @@
     "core-js": "^3.50.0",
     "css-loader": "^7.1.5",
     "debug": "^4.4.3",
-    "eslint": "9.38.0",
+    "eslint": "10.14.0",
     "glob-all": "^3.3.1",
     "globals": "^17.13.0",
     "husky": "^9.1.7",
