@@ -85,12 +85,14 @@ export default {
                 config: false,
                 plugins: [
                   [
-                    'autoprefixer', {
+                    'autoprefixer',
+                    {
                       remove: false
                     }
                   ],
                   [
-                    'perfectionist', {
+                    'perfectionist',
+                    {
                       trimLeadingZero: false,
                       sourcemap: true,
                       indentSize: 2,
