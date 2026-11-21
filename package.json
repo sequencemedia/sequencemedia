@@ -54,7 +54,7 @@
     "remove-files-webpack-plugin": "^1.5.0",
     "rimraf": "^6.1.4",
     "sass": "^1.108.2",
-    "sass-loader": "^17.1.0",
+    "sass-loader": "^17.1.1",
     "stylelint": "17.16.0",
     "stylelint-config-recommended-scss": "17.0.1",
     "stylelint-scss": "7.3.0",
